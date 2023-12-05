@@ -23,7 +23,7 @@ export default function RootLayout({children}) {
     <html lang="en">
       <body className={(inter.variable, roboto.variable)}>
         <Header />
-        <main>{children}</main>
+        <main className="pt-16">{children}</main>
         <Footer />
       </body>
     </html>

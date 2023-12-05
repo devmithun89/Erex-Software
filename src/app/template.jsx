@@ -19,9 +19,9 @@ const Template = ({children}) => {
         transition={{type: "linear", delay: 0.2, duration: 0.4}}>
         {children}
       </motion.main>
-      <span
+      {/* <span
         style={{transform: `translateY(${completion - 100}%)`}}
-        className="fixed top-0 bottom-0 right-0 z-50 w-1 transition-all duration-700 bg-primary"></span>
+        className="fixed top-0 bottom-0 right-0 z-[1003] w-1 transition-all duration-700 bg-primary"></span> */}
     </>
   );
 };

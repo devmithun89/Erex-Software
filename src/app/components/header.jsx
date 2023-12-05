@@ -18,9 +18,9 @@ export default function Header() {
       <header
         className={`${
           header ? "py-5 bg-white shadow-lg" : "py-6 bg-white "
-        } sticky top-0 z-30  transition-all`}>
+        } fixed w-full top-0 z-[1000]  transition-all`}>
         <div className="container mx-auto">
-          <div className="flex justify-between px-6 md:px-10 lg:px-20">
+          <div className="flex items-center justify-between px-6 md:px-10 lg:px-20">
             <Logo />
             <div className="items-center hidden lg:flex gap-x-2">
               <Nav />
