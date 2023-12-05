@@ -1,9 +1,16 @@
+import Image from "next/image";
 import React from "react";
 
 export default function Logo() {
   return (
     <div>
-      <img className="h-10 w-22" src="./erex.jpg" alt="Erexlogo" />
+      <Image
+        className="w-24 h-10"
+        width={96}
+        height={40}
+        src="/erex.jpg"
+        alt="Erexlogo"
+      />
     </div>
   );
 }

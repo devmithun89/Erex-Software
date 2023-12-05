@@ -53,7 +53,7 @@ export default function NewSletter() {
             <div className="absolute flex items-center justify-start w-full h-auto rounded-[60px] md:mx-1  lg:mx-4 xl:mx-8 border-whiteborder shadow-md stroke-none border-[1px] border-solid bg-white ">
               <div className=" hidden md:block focus:outline-none  placeholder-litetext stroke-none w-[70%] h-auto  ">
                 <input
-                  className="flex-shrink-0 w-full py-8 max-h-fit md:px-4 xl:px-10 lg:px-8 rounded-l-[60px] focus:outline-none placeholder-litetext "
+                  className="flex-shrink-0 w-full py-8 max-h-fit md:px-4 xl:px-10 lg:px-8 rounded-l-[60px] focus:outline-none placeholder-litetext   "
                   type="text"
                   name="text"
                   placeholder="Enter your email address.."

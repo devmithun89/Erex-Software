@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function Hero() {
@@ -27,10 +28,12 @@ export default function Hero() {
         <div class="w-[100%] z-10  items-center flex justify-end relative  ">
           <div className="absolute top-0 w-20 h-20 rounded-full md:top-0 lg:top-0 md:-left-6 lg:-left-8 left-3 -z-10 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-skyblue"></div>
           <div>
-            <img
+            <Image
               class="h-auto max-w-full pl-12 md:pl-6  "
-              src="./hero.png"
+              src="/hero.png"
               alt="heroBenar"
+              width={754}
+              height={512}
             />
           </div>
           <div
