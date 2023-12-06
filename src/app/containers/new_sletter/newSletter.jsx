@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function NewSletter() {
@@ -66,10 +67,13 @@ export default function NewSletter() {
                 </button>
               </div>
             </div>
-            <img
+            <Image
               className="lg:w-[543px]  lg:h-[292px] flex-shrink-0 "
-              src="./Rectangle31.png"
+              src="/Rectangle31.png"
               alt="Rectangle"
+              sizes="100vw"
+              width={500}
+              height={300}
             />
           </div>
         </div>

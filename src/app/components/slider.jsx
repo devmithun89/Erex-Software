@@ -1,4 +1,5 @@
 import Carousel from "better-react-carousel";
+import Image from "next/image";
 import React, {useEffect, useMemo, useState} from "react";
 import {AiFillLeftCircle, AiFillRightCircle} from "react-icons/ai";
 
@@ -65,17 +66,32 @@ export default function slider() {
                 <div className="relative">
                   <div class="absolute  bottom-12 hidden  md:block left-10 w-24 h-24 ring-8 -z-10 ring-pink rounded-full"></div>
                   <div>
-                    <img
+                    <Image
                       className="absolute hidden  md:block h-auto max-w-[196px] right-4  -z-10"
-                      src="./Dot2.png"
+                      src="/Dot2.png"
                       alt="Dot"
+                      sizes="100vw"
+                      style={{
+                        width: "100%",
+                        height: "auto",
+                      }}
+                      width={500}
+                      height={300}
                     />
                   </div>
-                  <img
-                    className="max-w-full hidden  md:block ;
-                h-auto;
-               "
-                    src="./unsplash_MTZTGvDsHFY.png"
+
+                  <Image
+                    className=" hidden  md:block ;
+                 
+                  "
+                    sizes="100vw"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
+                    width={500}
+                    height={300}
+                    src="/unsplash_MTZTGvDsHFY.png"
                     alt="unsplash_MTZTGvDsHFY"
                   />
                 </div>
@@ -90,8 +106,20 @@ export default function slider() {
                     Highly recommend.
                   </p>
                 </div>
-                <div className="pt-4 max-w-[40%] md:max-w-[100%] ">
-                  <img className="h-auto md:max-w-full" src="./Group.png" alt="Group" />
+                <div className="pt-4  max-w-[40%] md:max-w-[100%] ">
+                  <div className="relative w-full h-full"></div>
+                  <Image
+                    className="h-auto md:max-w-full"
+                    sizes="100vw"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                    }}
+                    width={500}
+                    height={300}
+                    src="/Group.png"
+                    alt="Group"
+                  />
                 </div>
               </div>
             </Carousel.Item>

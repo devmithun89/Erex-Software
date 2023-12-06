@@ -21,7 +21,7 @@ export default function Hero() {
           </button>
           <img
             className="absolute -bottom-16 -z-10 left-4 md:-bottom-28  md:-left-4 w-[254px] h-[94px] md:w-[384px] md:h-[144px]"
-            src="./DotOrnament.png"
+            src="/DotOrnament.png"
             alt="Dotpng"
           />
         </div>

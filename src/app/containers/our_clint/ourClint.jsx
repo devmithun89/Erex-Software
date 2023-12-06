@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 export default function OurClint() {
   return (
@@ -13,26 +14,38 @@ export default function OurClint() {
         </p>
       </div>
       <div className="flex flex-row items-center justify-start gap-6 pt-8 overflow-auto md:pt-4 whitespace-nowrap md:justify-center md:gap-6 lg:gap-6 xl:gap-14 md:flex-row ">
-        <img
+        <Image
           className="w-[150px] h-[49px] md:w-[110px] md:h-auto lg:w-[100px] lg:h-auto xl:w-[150px] xl:h-[49px]"
-          src="./GoogleLogo.png"
+          src="/GoogleLogo.png"
           alt="GoogleLogo"
+          sizes="100vw"
+          width={500}
+          height={300}
         />
 
-        <img
+        <Image
           className="w-[166px] h-[52px]  md:w-[110px] md:h-auto lg:w-[100px] lg:h-auto xl:w-[166px] xl:h-[52px]"
-          src="./AirbnbLogo.png"
+          src="/AirbnbLogo.png"
           alt="AirbnbLogo"
+          sizes="100vw"
+          width={500}
+          height={300}
         />
-        <img
+        <Image
           className="w-[166px] h-[27px]  md:w-[110px] md:h-auto lg:w-[100px] lg:h-auto xl:w-[166px] xl:h-[27px] "
-          src="./UberEatsLogo.png"
+          src="/UberEatsLogo.png"
           alt="UberEatsLogo"
+          sizes="100vw"
+          width={500}
+          height={300}
         />
-        <img
+        <Image
           className="w-[141px] h-[42px]  md:w-[110px] md:h-auto lg:w-[100px] lg:h-auto xl:w-[141px] xl:h-[42px] "
-          src="./AmazonLogo.png"
+          src="/AmazonLogo.png"
           alt="AmazonLogo"
+          sizes="100vw"
+          width={500}
+          height={300}
         />
       </div>
     </section>

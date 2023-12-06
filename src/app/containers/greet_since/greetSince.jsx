@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function GreetSince() {
@@ -6,7 +7,18 @@ export default function GreetSince() {
       <div className="relative flex flex-col w-full gap-3 md:gap-6 md:flex-row">
         <div className="relative w-full ">
           <div className="absolute rounded-full bottom-4 right-4 -z-10 w-28 h-28 bg-yellowlite"></div>
-          <img className="h-auto max-w-full" src="./unsplash.png" alt="unsplash" />
+          <Image
+            className="h-auto max-w-full"
+            sizes="100vw"
+            style={{
+              width: "100%",
+              height: "auto",
+            }}
+            width={500}
+            height={300}
+            src="/unsplash.png"
+            alt="unsplash"
+          />
         </div>
         <div className="relative flex flex-col justify-center w-full gap-8 ">
           <div className="absolute -top-2 lg:top-28 rounded-br-[70%] -z-10 w-36 h-36 bg-purplelite"></div>

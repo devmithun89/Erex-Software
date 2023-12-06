@@ -194,7 +194,7 @@ export default function Footer() {
             </div>
           </div>
           <p class="text-xs text-gray-500 items-center flex justify-center">
-            &copy; Copyright © 2023 Erex Softwere.
+            &copy; Copyright © 2023 Erex Software.
           </p>
         </div>
       </footer>
