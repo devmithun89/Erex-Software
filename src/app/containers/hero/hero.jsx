@@ -34,6 +34,7 @@ export default function Hero() {
               alt="heroBenar"
               width={754}
               height={512}
+              sizes="100vw"
             />
           </div>
           <div

@@ -4,7 +4,7 @@ export default function OurClint() {
   return (
     <section
       id="What_We_Do"
-      className="flex flex-col px-6 pt-16 lg:justify-between lg:flex-row md:pt-28 lg:pt-24 md:px-20 lg:px-20">
+      className="flex flex-col px-6 pt-16 lg:justify-between lg:flex-row md:pt-28 lg:pt-20 md:px-20 lg:px-20">
       <div className="flex flex-col items-center justify-center gap-2 text-center lg:items-start">
         <h3 className="text-2xl font-medium text-black md:text-3xl lg:text-4xl font-roboto">
           Our Client
