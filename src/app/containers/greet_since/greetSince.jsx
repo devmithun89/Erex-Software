@@ -6,7 +6,7 @@ export default function GreetSince() {
     <section id="Project" className="px-6 pt-16 md:pt-16 lg:pt-20 lg:px-20 lg:py-20">
       <div className="relative flex flex-col w-full gap-3 md:gap-6 md:flex-row">
         <div className="relative w-full ">
-          <div className="absolute rounded-full bottom-4 right-4 -z-10 w-28 h-28 bg-yellowlite"></div>
+          <div className="absolute bottom-0 right-0 w-24 h-24 rounded-full md:bottom-2 lg:bottom-4 md:right-0 lg:right-4 -z-10 md:w-24 md:h-24 lg:w-28 lg:h-28 bg-yellowlite"></div>
           <Image
             className="h-auto max-w-full"
             sizes="100vw"

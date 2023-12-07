@@ -5,7 +5,6 @@ import HappyClint from "../containers/heppy_clint/happyClint";
 import Hero from "../containers/hero/hero";
 import NewSletter from "../containers/new_sletter/newSletter";
 import OurClint from "../containers/our_clint/ourClint";
-
 export default function Page() {
   return (
     <>

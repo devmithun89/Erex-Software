@@ -1,6 +1,6 @@
 "use client";
 
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {RxCross2} from "react-icons/rx";
 import {CgMenuRightAlt} from "react-icons/cg";
 import {useAutoAnimate} from "@formkit/auto-animate/react";
@@ -8,7 +8,6 @@ import {Link as ScrollLink, animateScroll as scroll} from "react-scroll";
 import {useRouter} from "next/navigation";
 
 import Link from "next/link";
-import {flightRouterStateSchema} from "next/dist/server/app-render/types";
 
 export default function MobileNav() {
   const router = useRouter();
@@ -25,10 +24,15 @@ export default function MobileNav() {
   };
   const handleLinkClick = () => {
     // Close the menu when a link is clicked
-    setIsOpen(false);
+    setIsOpen(!isOpen);
     setExpanded(false);
     router.push("/");
-    setVisible(false);
+    setVisible(true);
+  };
+  const shouldHide = () => {
+    setExpanded(false);
+    setIsOpen(false);
+    setVisible(true);
   };
 
   return (
@@ -56,6 +60,7 @@ export default function MobileNav() {
             </ScrollLink>
             {visible && (
               <ScrollLink
+                onClick={shouldHide}
                 to="What_We_Do"
                 spy={true}
                 smooth={true}
@@ -67,17 +72,19 @@ export default function MobileNav() {
             )}
             {visible && (
               <ScrollLink
+                onClick={shouldHide}
                 to="Service"
                 spy={true}
                 smooth={true}
                 duration={500}
-                offset={10}
+                offset={-60}
                 className="relative group">
                 Service
               </ScrollLink>
             )}
             {visible && (
               <ScrollLink
+                onClick={shouldHide}
                 to="Project"
                 spy={true}
                 smooth={true}

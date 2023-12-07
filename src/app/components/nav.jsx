@@ -34,7 +34,7 @@ export default function Nav() {
             smooth={true}
             duration={500}
             offset={-50}
-            className="relative group">
+            className="relative group ">
             Home
             {/* ... */}
             <span className="absolute -bottom-1 rounded left-0 w-full h-[3px] bg-primary origin-left transform scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
