@@ -7,13 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import {GrNext} from "react-icons/gr";
 import {GrPrevious} from "react-icons/gr";
-import "./slickcarousel.module.css";
 export default function SlickCarousel() {
-  const CustomDots = ({onClick, active}) => (
-    <div
-      className={`custom-dot ${active ? "custom-dot-active" : ""}`}
-      onClick={onClick}></div>
-  );
   const slider = React.useRef(null);
   const settings = {
     dots: true,
@@ -22,12 +16,6 @@ export default function SlickCarousel() {
     slidesToShow: 4,
     slidesToScroll: 1,
     initialSlide: 0,
-    appendDots: (dots) => (
-      <div style={{bottom: "-30px"}}>
-        <ul style={{margin: "0px"}}>{dots}</ul>
-      </div>
-    ),
-    customPaging: (i) => <CustomDots key={i} active={i === 0} onClick={() => {}} />,
     responsive: [
       {
         breakpoint: 1024,
@@ -61,19 +49,19 @@ export default function SlickCarousel() {
   };
   return (
     <>
-      <div className="relative w-full">
-        <button
-          className="absolute z-10 p-2 -translate-y-1/2 rounded-full cursor-pointer lg:hidden md:text-2xl -right-5 top-1/2 md:-right-12 bg-skyblue text-primary"
+      <div className="relative w-full px-2">
+        {/* <button
+          className="absolute z-10 p-2 text-white -translate-y-1/2 rounded-full cursor-pointer lg:hidden md:text-2xl -right-5 top-1/2 md:-right-12 bg-primary ring-sky-200 ring-4"
           onClick={() => slider?.current?.slickNext()}>
           <GrNext />
         </button>
         <button
-          className="absolute z-10 p-2 -translate-y-1/2 rounded-full cursor-pointer lg:hidden -left-5 md:text-2xl top-1/2 md:-left-12 bg-skyblue text-primary"
+          className="absolute z-10 p-2 text-white -translate-y-1/2 rounded-full cursor-pointer lg:hidden -left-5 md:text-2xl top-1/2 md:-left-12 bg-primary ring-sky-200 ring-4"
           onClick={() => slider?.current?.slickPrev()}>
           <GrPrevious />
-        </button>
+        </button> */}
         <Slider ref={slider} {...settings}>
-          <div className="px-4">
+          <div className="px-2 pt-1">
             <Image
               className="w-full h-full"
               src="/GoogleLogo.png"
@@ -83,7 +71,7 @@ export default function SlickCarousel() {
               height={300}
             />
           </div>
-          <div className="px-4">
+          <div className="px-2">
             <Image
               className="w-full h-full "
               src="/AirbnbLogo.png"
@@ -93,9 +81,9 @@ export default function SlickCarousel() {
               height={300}
             />
           </div>
-          <div className="px-4 pt-3">
+          <div className="px-2 pt-3">
             <Image
-              className="w-full h-full"
+              className="w-full h-full "
               src="/UberEatsLogo.png"
               alt="UberEatsLogo"
               sizes="100vw"
@@ -103,7 +91,7 @@ export default function SlickCarousel() {
               height={300}
             />
           </div>
-          <div className="px-4 pt-3">
+          <div className="px-2 pt-3">
             <Image
               className="w-full h-full"
               src="/AmazonLogo.png"

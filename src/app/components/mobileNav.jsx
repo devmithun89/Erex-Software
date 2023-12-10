@@ -11,6 +11,7 @@ import Link from "next/link";
 
 export default function MobileNav() {
   const router = useRouter();
+  // const currentRoute = router.pathname;
 
   const [isOpen, setIsOpen] = useState(false);
   const [animationParent] = useAutoAnimate();
@@ -54,7 +55,9 @@ export default function MobileNav() {
               smooth={true}
               duration={500}
               offset={-50}
-              className="relative group">
+              // className={`relative group ${currentRoute === "/" && "active"}`}
+              // activeClass="active"
+            >
               Home
               {/* ... */}
             </ScrollLink>

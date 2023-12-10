@@ -6,3 +6,22 @@
     transform: scaleX(1);
   }
 }
+
+/* Add these styles to your CSS */
+
+/* Define the blue color for the active class */
+.active {
+  color: blue;
+}
+
+/* Add any additional styles you want for the active link */
+.active::before {
+  content: ""; /* Optionally, you can add some visual indicator */
+  display: block;
+  width: 100%; /* Adjust the width according to your design */
+  height: 2px; /* Adjust the height according to your design */
+  background-color: blue;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

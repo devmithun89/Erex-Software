@@ -1,68 +1,49 @@
-import Carousel from "better-react-carousel";
+"use client";
+
 import Image from "next/image";
 import React, {useEffect, useMemo, useState} from "react";
-import {AiFillLeftCircle, AiFillRightCircle} from "react-icons/ai";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import {GrNext} from "react-icons/gr";
+import {GrPrevious} from "react-icons/gr";
 
-export default function slider() {
-  const MyDot = ({isActive}) => (
-    <span
-      style={{
-        display: "inline-block",
-        bottom: 10,
-        height: isActive ? "15px" : "10px",
-        width: isActive ? "15px" : "10px",
-        background: isActive ? "#2639ED" : "#E7F0FC",
-        borderRadius: "10px",
-      }}></span>
-  );
-
+export default function RatingSlider() {
   const data = [
     {name: "Raj", id: 1},
     {name: "Raj", id: 1},
     {name: "Raj", id: 1},
     {name: "Raj", id: 1},
   ];
+  const slider = React.useRef(null);
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    dots: true,
+  };
 
   return (
-    <div>
-      <Carousel
-        cols={1}
-        rows={1}
-        gap={10}
-        // autoplay={4000}
-        dotColorActive="#2639ED"
-        arrowRight={
-          <AiFillRightCircle
-            size={50}
-            className="absolute top-1/2 right-[1px] z-10 -translate-y-1/2 cursor-pointer rounded-full bg-skyblue text-2xl text-primary"
-          />
-        }
-        arrowLeft={
-          <AiFillLeftCircle
-            size={50}
-            className="absolute top-1/2 left-[1px] z-10 -translate-y-1/2 cursor-pointer rounded-full bg-skyblue text-2xl text-primary"
-          />
-        }
-        showDots
-        dot={MyDot}
-        loop
-        responsiveLayout={[
-          {
-            breakpoint: 1380,
-            cols: 1,
-            gap: 5,
-          },
-          {
-            breakpoint: 640,
-            cols: 1,
-            gap: 10,
-          },
-        ]}>
+    <div className="relative w-full md:px-14 ">
+      <button
+        className="absolute z-10 hidden p-2 text-white -translate-y-1/2 rounded-full cursor-pointer md:block md:text-2xl right-1 top-1/2 md:right-3 bg-primary ring-sky-200 ring-4"
+        onClick={() => slider?.current?.slickNext()}>
+        <GrNext />
+      </button>
+      <button
+        className="absolute z-10 hidden p-2 text-white -translate-y-1/2 rounded-full cursor-pointer md:block left-1 md:text-2xl top-1/2 md:left-3 bg-primary ring-sky-200 ring-4"
+        onClick={() => slider?.current?.slickPrev()}>
+        <GrPrevious />
+      </button>
+      <Slider ref={slider} {...settings}>
         {data.map((item, index) => {
           return (
-            <Carousel.Item>
-              {/* normally width is set to 95% | for screens <= 640px width=90% | for screens <= 370px width=85% */}
-              <div className="w-[95%] max-sm:w-[90%] max-xsm:w-[85%] py-4 gap-2 flex lg:gap-4 justify-center items-center md:px-8">
+            /* normally width is set to 95% | for screens <= 640px width=90% | for screens <= 370px width=85% */
+
+            <div className="w-[100%] max-sm:w-[90%] h-full  md:py-4 gap-2 flex lg:gap-4 justify-center items-center md:px-8">
+              <div className="flex items-center justify-center ">
                 <div className="relative">
                   <div class="absolute  bottom-12 hidden  md:block left-10 w-24 h-24 ring-8 -z-10 ring-pink rounded-full"></div>
                   <div>
@@ -81,9 +62,7 @@ export default function slider() {
                   </div>
 
                   <Image
-                    className=" hidden  md:block ;
-                 
-                  "
+                    className=" hidden  md:block ;"
                     sizes="100vw"
                     style={{
                       width: "100%",
@@ -109,7 +88,7 @@ export default function slider() {
                 <div className="pt-4  max-w-[40%] md:max-w-[100%] ">
                   <div className="relative w-full h-full"></div>
                   <Image
-                    className="h-auto md:max-w-full"
+                    className="h-auto p-2 md:max-w-full"
                     sizes="100vw"
                     style={{
                       width: "100%",
@@ -122,10 +101,10 @@ export default function slider() {
                   />
                 </div>
               </div>
-            </Carousel.Item>
+            </div>
           );
         })}
-      </Carousel>
+      </Slider>
     </div>
   );
 }

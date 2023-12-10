@@ -18,3 +18,12 @@ body {
   height: 100%;
   width: 100%;
 }
+
+.slick-dots li.slick-active button:before {
+  color: blue !important;
+}
+
+.slick-dots li button::before {
+  color: grey !important;
+  font-size: 10px !important;
+}

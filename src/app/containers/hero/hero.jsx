@@ -1,9 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
+import Spline from "@splinetool/react-spline";
 
 export default function Hero() {
   return (
     <div>
+      <div className="absolute top-0 -z-20 ">
+        {/* <Spline scene="https://prod.spline.design/ZriIa3fvMpd-FKnO/scene.splinecode" /> */}
+      </div>
       <section
         id="Hero"
         className="flex flex-col-reverse items-center justify-between w-full py-6 md:pl-16 lg:py-10 md:flex md:flex-row">
@@ -28,14 +34,17 @@ export default function Hero() {
         <div class="w-[100%] z-10  items-center flex justify-end relative  ">
           <div className="absolute top-0 w-20 h-20 rounded-full md:top-0 lg:top-0 md:-left-6 lg:-left-8 left-3 -z-10 md:w-28 md:h-28 lg:w-32 lg:h-32 bg-skyblue"></div>
           <div>
-            <Image
+            {/* <Image
               class="h-auto max-w-full pl-12 md:pl-6  "
               src="/hero.png"
               alt="heroBenar"
               width={754}
               height={512}
               sizes="100vw"
-            />
+            /> */}
+            <div className="w-[554px] h-auto">
+              <Spline scene="https://prod.spline.design/gtG9JIKLGVWP4XfS/scene.splinecode" />
+            </div>
           </div>
           <div
             className="absolute  right-16 -bottom-12 md:-bottom-16  -z-10  rounded-br-[50%] w-24 h-24
